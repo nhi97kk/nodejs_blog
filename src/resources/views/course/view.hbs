@@ -1,0 +1,29 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Index</th>
+      <th scope="col">Course name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Date</th>
+      <th colspan="2" scope="col" class="text-center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each courses}}
+    <tr>
+      <th scope="row">{{@index}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.desc}}</td>
+      <td>{{this.createdAt}}</td>
+      <td>
+        <a class="btn btn-warning" href="#" role="button">Edit</a>
+        
+      </td>
+      <td>
+        
+        <a class="btn btn-danger" href="#" role="button">Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
