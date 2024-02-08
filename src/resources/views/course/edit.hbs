@@ -1,0 +1,20 @@
+<div class="mt-4"></div>
+{{#with course}}
+<form method="post" action="/course/{{_id}}/update?_method=PUT" class="mt-4">
+    <h2>Edit course</h2>
+  <div class="form-group">
+    <label for="name">Name: </label>
+    <input value="{{name}}" type="text" class="form-control" id="name"  placeholder="Enter name" name="name"> 
+  </div>
+  <div class="form-group">
+    <label for="desc">Desc: </label>
+    <input value="{{desc}}" type="text" class="form-control" id="desc"  placeholder="Enter desc" name="desc"> 
+  </div>
+  <div class="form-group">
+    <label for="videoId">Video Id: </label>
+    <input value="{{videoId}}" type="text" class="form-control" id="videoId"  placeholder="Enter videoId" name="videoId"> 
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+{{/with}}
